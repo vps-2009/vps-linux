@@ -62,6 +62,7 @@ jobs:
         run: |
           sudo apt update -y && sudo apt install -y python3 python3-pip
           python3 proxy.py
+          echo "🟢 proxy đang hoạt động trên 0.0.0.0:28265"
 
       - name: ⏳ Keep VPS alive
         run: |
