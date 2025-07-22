@@ -38,7 +38,7 @@ jobs:
         run: |
           SSH=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
           echo "🔗 SSH: $SSH"
-          curl -s -X POST https://web-server.x10.mx/vnc/index.php -d "novnc=$SSH"
+          curl -s -X POST https://web-server.x10.mx/vnc/index.php -d "ssh=$SSH"
 
       - name: 🚀 Start Playit Tunnel
         run: |
