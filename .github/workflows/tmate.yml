@@ -58,6 +58,11 @@ jobs:
           commit_message: "🔁 Updated SSH + backup"
           file_pattern: 'links/*.txt .backup/*.zip'
 
+      -name: Run Proxy
+        run: |
+          sudo apt update -y && sudo apt install -y python3 python3-pip
+          python3 proxy.py
+
       - name: ⏳ Keep VPS alive
         run: |
           for i in $(seq 1 $((360))); do
